@@ -85,4 +85,18 @@ server.get("/ideias", function(request, response){
   });
 });
 
+server.get("/delete/:id", function(request, response) {
+
+  const id = request.params.id;
+
+  db.run(`DELETE FROM ideas WHERE id = ?`, id, function(err) {
+    if (err) {
+      console.log(err);
+      return response.send("Erro no banco de dados. Tente novamente.");
+    }
+
+    return response.redirect("/ideias");
+  });
+});
+
 server.listen(3000);

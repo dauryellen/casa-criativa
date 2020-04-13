@@ -39,3 +39,12 @@ function checkFields(event) {
     alert("Por favor, preencha todos os campos.");
   }  
 }
+
+function delConfirm(id) {
+  var res = confirm("Você deseja excluir esse registro?");
+
+  if(res) {
+    window.location=`/delete/${id}`;
+  }
+  alert("Registro excluido com sucesso!");
+}

@@ -11,15 +11,7 @@ db.serialize(function() {
       description TEXT,
       link TEXT
     );
-  `);
-
-  // DELETAR
-  /* db.run(`DELETE FROM ideas WHERE id = ?`, [1], function(err) {
-    if (err) return console.log(err);
-
-    console.log(this);
-  });*/
-  
+  `);  
 });
 
 module.exports = db;
