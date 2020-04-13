@@ -44,6 +44,7 @@ p, .description {
 .button:hover {
   background-color: #0984e3;
   text-decoration: none;
+  transition: 400ms;
 }
 
 /* PADRÃO */
